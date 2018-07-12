@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  string,
+  oneOf,
 } from 'prop-types'
 
 import { connect } from 'react-redux'
@@ -16,9 +16,11 @@ export const HeaderContainer = ({
 )
 
 HeaderContainer.propTypes = {
-  speed: string,
-  stringifiedStore: string,
-  username: string,
+  speed: oneOf([
+    'stopped',
+    'slow',
+    'fast',
+  ]),
 }
 
 HeaderContainer.defaultProps = {
@@ -26,7 +28,7 @@ HeaderContainer.defaultProps = {
 }
 
 const mapStateToProps = (state) => ({
-  ...state.logo,
+  ...state.logoReducer,
 })
 
 export default connect(

@@ -1,7 +1,7 @@
 import React from 'react'
 import {
   func,
-  string,
+  oneOf,
 } from 'prop-types'
 
 import './styles.css'
@@ -11,6 +11,7 @@ const SpeedButtons = ({
   speed,
 }) => (
   <div className="Speed-buttons-container">
+    <p>Change the speed of the logo</p>
     {
       [
         'stopped',
@@ -20,6 +21,7 @@ const SpeedButtons = ({
         <button
           className="Speed-buttons-button"
           disabled={speed === button}
+          key={button}
           onClick={() => handleClickChangeSpeed(button)}
         >
           { button }
@@ -31,7 +33,11 @@ const SpeedButtons = ({
 
 SpeedButtons.propTypes = {
   handleClickChangeSpeed: func.isRequired,
-  speed: string.isRequired,
+  speed: oneOf([
+    'stopped',
+    'slow',
+    'fast',
+  ]).isRequired,
 }
 
 export default SpeedButtons

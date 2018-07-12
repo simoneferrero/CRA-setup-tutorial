@@ -1,1 +1,1 @@
-export const change_speed = 'changeSpeed/change_speed'
+export const CHANGE_SPEED = 'changeSpeed/CHANGE_SPEED'

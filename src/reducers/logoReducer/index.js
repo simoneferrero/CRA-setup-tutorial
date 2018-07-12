@@ -1,12 +1,12 @@
 import {
-  change_speed,
+  CHANGE_SPEED,
 } from 'actions/changeSpeed/constants'
 
 import initialState from './initialState'
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case change_speed:
+    case CHANGE_SPEED:
       return {
         ...initialState,
         speed: action.speed,

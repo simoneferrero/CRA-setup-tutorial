@@ -7,8 +7,6 @@ import App from 'App'
 
 import registerServiceWorker from 'utils/registerServiceWorker'
 
-import 'styles.css'
-
 ReactDOM.render(
   <Provider store={configureStore()}>
     <App />

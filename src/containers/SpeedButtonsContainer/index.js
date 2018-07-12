@@ -1,7 +1,7 @@
 import React from 'react'
 import {
   func,
-  string,
+  oneOf,
 } from 'prop-types'
 
 import { connect } from 'react-redux'
@@ -24,7 +24,11 @@ export const SpeedButtonsContainer = ({
 
 SpeedButtonsContainer.propTypes = {
   handleClickChangeSpeed: func,
-  speed: string,
+  speed: oneOf([
+    'stopped',
+    'slow',
+    'fast',
+  ]).isRequired,
 }
 
 SpeedButtonsContainer.defaultProps = {
@@ -33,7 +37,7 @@ SpeedButtonsContainer.defaultProps = {
 }
 
 const mapStateToProps = (state) => ({
-  ...state.logo,
+  ...state.logoReducer,
 })
 const mapDispatchToProps = (dispatch) => ({
 	handleClickChangeSpeed: (username) => dispatch(changeSpeed(username)),

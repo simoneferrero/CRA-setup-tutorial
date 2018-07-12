@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  string,
+  oneOf,
 } from 'prop-types'
 
 import logo from 'icons/logo.svg'
@@ -12,12 +12,16 @@ const Header = ({
 }) => (
   <header className="App-header">
     <img src={logo} className={`App-logo App-logo-${speed}`} alt="logo" />
-    <h1 className="App-title">Welcome to React</h1>
+    <h1 className="App-title">CRA Setup Tutorial</h1>
   </header>
 )
 
 Header.propTypes = {
-  speed: string.isRequired,
+  speed: oneOf([
+    'stopped',
+    'slow',
+    'fast',
+  ]).isRequired,
 }
 
 export default Header

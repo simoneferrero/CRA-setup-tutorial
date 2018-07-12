@@ -1,11 +1,8 @@
 .App-logo {
   animation: App-logo-spin infinite linear;
+  animation-duration: 20s;
   animation-play-state: running;
   height: 80px;
-}
-
-.App-logo-slow {
-  animation-duration: 20s;
 }
 
 .App-logo-fast {
@@ -13,7 +10,6 @@
 }
 
 .App-logo-stopped {
-  animation-duration: 20s;
   animation-play-state: paused;
 }
 
