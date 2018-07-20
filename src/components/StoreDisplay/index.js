@@ -15,7 +15,11 @@ const StoreDisplay = ({
 )
 
 StoreDisplay.propTypes = {
-  stringifiedStore: string.isRequired,
+  stringifiedStore: string,
+}
+
+StoreDisplay.defaultProps = {
+  stringifiedStore: '',
 }
 
 export default StoreDisplay

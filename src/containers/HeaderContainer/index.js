@@ -1,7 +1,4 @@
 import React from 'react'
-import {
-  oneOf,
-} from 'prop-types'
 
 import { connect } from 'react-redux'
 
@@ -15,20 +12,12 @@ export const HeaderContainer = ({
   />
 )
 
-HeaderContainer.propTypes = {
-  speed: oneOf([
-    'stopped',
-    'slow',
-    'fast',
-  ]),
-}
+HeaderContainer.propTypes = Header.propTypes
 
-HeaderContainer.defaultProps = {
-  speed: 'slow',
-}
+HeaderContainer.defaultProps = Header.defaultProps
 
-const mapStateToProps = (state) => ({
-  ...state.logoReducer,
+const mapStateToProps = ({ logoReducer }) => ({
+  ...logoReducer,
 })
 
 export default connect(

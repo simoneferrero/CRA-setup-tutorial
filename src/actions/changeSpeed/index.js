@@ -1,6 +1,6 @@
 import {
   CHANGE_SPEED,
-} from './constants'
+} from './types'
 
 export const changeSpeed = (speed) => ({
   type: CHANGE_SPEED,

@@ -1,7 +1,4 @@
 import React from 'react'
-import {
-  string,
-} from 'prop-types'
 
 import { connect } from 'react-redux'
 
@@ -15,13 +12,9 @@ export const StoreDisplayContainer = ({
   />
 )
 
-StoreDisplayContainer.propTypes = {
-  stringifiedStore: string,
-}
+StoreDisplayContainer.propTypes = StoreDisplay.propTypes
 
-StoreDisplayContainer.defaultProps = {
-  stringifiedStore: '',
-}
+StoreDisplayContainer.defaultProps = StoreDisplay.defaultProps
 
 const mapStateToProps = (state) => ({
   stringifiedStore: JSON.stringify(state, null, 2),

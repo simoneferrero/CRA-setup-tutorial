@@ -1,6 +1,6 @@
 import {
   CHANGE_SPEED,
-} from 'actions/changeSpeed/constants'
+} from 'actions/changeSpeed/types'
 
 import initialState from './initialState'
 

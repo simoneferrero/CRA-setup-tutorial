@@ -32,12 +32,17 @@ const SpeedButtons = ({
 )
 
 SpeedButtons.propTypes = {
-  handleClickChangeSpeed: func.isRequired,
+  handleClickChangeSpeed: func,
   speed: oneOf([
     'stopped',
     'slow',
     'fast',
-  ]).isRequired,
+  ]),
+}
+
+SpeedButtons.defaultProps = {
+  handleClickChangeSpeed: () => {},
+  speed: 'slow',
 }
 
 export default SpeedButtons

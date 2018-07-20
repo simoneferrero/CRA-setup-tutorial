@@ -12,7 +12,7 @@ const Header = ({
 }) => (
   <header className="App-header">
     <img src={logo} className={`App-logo App-logo-${speed}`} alt="logo" />
-    <h1 className="App-title">CRA Setup Tutorial</h1>
+    <h1 className="App-title">CRA Setup Tutorial - Redux</h1>
   </header>
 )
 
@@ -21,7 +21,11 @@ Header.propTypes = {
     'stopped',
     'slow',
     'fast',
-  ]).isRequired,
+  ]),
+}
+
+Header.defaultProps = {
+  speed: 'slow',
 }
 
 export default Header
