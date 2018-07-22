@@ -6,11 +6,11 @@ import {
 
 import './styles.css'
 
-const SpeedButtons = ({
+const LogoControls = ({
   handleClickChangeSpeed,
   speed,
 }) => (
-  <div className="Speed-buttons-container">
+  <div className="Logo-controls-container">
     <p>Change the speed of the logo</p>
     {
       [
@@ -19,7 +19,7 @@ const SpeedButtons = ({
         'fast',
       ].map((button) => (
         <button
-          className="Speed-buttons-button"
+          className="Logo-controls-button"
           disabled={speed === button}
           key={button}
           onClick={() => handleClickChangeSpeed(button)}
@@ -31,7 +31,7 @@ const SpeedButtons = ({
   </div>
 )
 
-SpeedButtons.propTypes = {
+LogoControls.propTypes = {
   handleClickChangeSpeed: func,
   speed: oneOf([
     'stopped',
@@ -40,9 +40,9 @@ SpeedButtons.propTypes = {
   ]),
 }
 
-SpeedButtons.defaultProps = {
+LogoControls.defaultProps = {
   handleClickChangeSpeed: () => {},
   speed: 'slow',
 }
 
-export default SpeedButtons
+export default LogoControls

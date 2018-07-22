@@ -1,9 +1,9 @@
-.Speed-buttons-container {
+.Logo-controls-container {
   padding: 20px;
   text-align: center;
 }
 
-.Speed-buttons-button {
+.Logo-controls-button {
   background-color: #085c82;
   border: 1px solid rgb(0,0,0);
   border: 1px solid rgba(0,0,0,.33);
@@ -24,18 +24,18 @@
   white-space: nowrap;
 }
 
-.Speed-buttons-button:hover,
-.Speed-buttons-button:focus,
-.Speed-buttons-button:active {
+.Logo-controls-button:hover,
+.Logo-controls-button:focus,
+.Logo-controls-button:active {
   background-color: #2780a8;
   text-decoration: none;
 }
 
-.Speed-buttons-button:focus {
+.Logo-controls-button:focus {
   box-shadow: inset 0 0 2px rgba(0,0,0,.33);
 }
 
-.Speed-buttons-button:disabled {
+.Logo-controls-button:disabled {
   background-color: #263b45;
   cursor: not-allowed;
 }

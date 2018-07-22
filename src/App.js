@@ -1,7 +1,7 @@
 import React from 'react';
 
 import HeaderContainer from 'containers/HeaderContainer'
-import SpeedButtonsContainer from 'containers/SpeedButtonsContainer'
+import LogoControlsContainer from 'containers/LogoControlsContainer'
 import StoreDisplayContainer from 'containers/StoreDisplayContainer'
 
 import './styles.css';
@@ -9,7 +9,7 @@ import './styles.css';
 const App = () => (
   <div>
     <HeaderContainer />
-    <SpeedButtonsContainer />
+    <LogoControlsContainer />
     <StoreDisplayContainer />
   </div>
 )
