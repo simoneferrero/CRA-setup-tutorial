@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 
 import HeaderContainer from 'containers/HeaderContainer'
 import LogoControlsContainer from 'containers/LogoControlsContainer'
 import StoreDisplayContainer from 'containers/StoreDisplayContainer'
 
-import './styles.css';
+import './styles.css'
 
 const App = () => (
   <div>
@@ -14,4 +14,4 @@ const App = () => (
   </div>
 )
 
-export default App;
+export default App
