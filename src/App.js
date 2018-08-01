@@ -1,16 +1,16 @@
 import React from 'react'
 
-import HeaderContainer from 'containers/HeaderContainer'
-import LogoControlsContainer from 'containers/LogoControlsContainer'
-import StoreDisplayContainer from 'containers/StoreDisplayContainer'
+import Header from 'components/Header'
+import LogoControls from 'components/LogoControls'
+import StoreDisplay from 'components/StoreDisplay'
 
 import './styles.css'
 
 const App = () => (
   <div>
-    <HeaderContainer />
-    <LogoControlsContainer />
-    <StoreDisplayContainer />
+    <Header />
+    <LogoControls />
+    <StoreDisplay />
   </div>
 )
 
