@@ -3,5 +3,9 @@ import {
 } from 'immutable'
 
 export default fromJS({
-  speed: 'slow',
+  logos: {
+    reactLogo: {
+      speed: 'slow',
+    },
+  },
 })

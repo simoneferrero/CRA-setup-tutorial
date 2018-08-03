@@ -1,11 +1,17 @@
 import { connect } from 'react-redux'
 
+import toJS from 'utils/toJS'
+
+import {
+  reactLogoSelector,
+} from 'reducers/logoReducer/selectors'
+
 import Header from 'components/Header'
 
 const mapStateToProps = (state) => ({
-  speed: state.getIn(['logoReducer', 'speed']),
+  logo: reactLogoSelector(state),
 })
 
 export default connect(
   mapStateToProps,
-)(Header)
+)(toJS(Header))

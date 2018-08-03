@@ -7,7 +7,7 @@ import initialState from './initialState'
 export default (state = initialState, action) => {
   switch (action.type) {
     case CHANGE_SPEED:
-      return state.set('speed', action.speed)
+      return state.setIn(['logos', 'reactLogo', 'speed'], action.speed)
 
     default:
       return state

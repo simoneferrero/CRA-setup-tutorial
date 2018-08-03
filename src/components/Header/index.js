@@ -1,31 +1,36 @@
 import React from 'react'
 import {
   oneOf,
+  shape,
 } from 'prop-types'
 
-import logo from 'icons/logo.svg'
+import reactLogo from 'icons/reactLogo.svg'
 
 import './styles.css'
 
 const Header = ({
-  speed,
+  logo,
 }) => (
   <header className="App-header">
-    <img src={logo} className={`App-logo App-logo-${speed}`} alt="logo" />
-    <h1 className="App-title">CRA Setup Tutorial - Redux</h1>
+    <img src={reactLogo} className={`App-logo App-logo-${logo.speed}`} alt="logo" />
+    <h1 className="App-title">CRA Setup Tutorial - Immutable & Reselect</h1>
   </header>
 )
 
 Header.propTypes = {
-  speed: oneOf([
-    'stopped',
-    'slow',
-    'fast',
-  ]),
+  logo: shape({
+    speed: oneOf([
+      'stopped',
+      'slow',
+      'fast',
+    ]),
+  }),
 }
 
 Header.defaultProps = {
-  speed: 'slow',
+  logo: {
+    speed: 'slow',
+  },
 }
 
 export default Header
