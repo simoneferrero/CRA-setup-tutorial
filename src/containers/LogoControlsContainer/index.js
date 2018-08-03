@@ -6,8 +6,8 @@ import {
 
 import LogoControls from 'components/LogoControls'
 
-const mapStateToProps = ({ logoReducer }) => ({
-  ...logoReducer,
+const mapStateToProps = (state) => ({
+  speed: state.getIn(['logoReducer', 'speed']),
 })
 const mapDispatchToProps = (dispatch) => ({
 	handleClickChangeSpeed: (speed) => dispatch(changeSpeed(speed)),
