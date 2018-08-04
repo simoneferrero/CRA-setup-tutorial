@@ -3,13 +3,13 @@ import { connect } from 'react-redux'
 import toJS from 'utils/toJS'
 
 import {
-  reactLogoSelector,
+  logoSelector,
 } from 'reducers/logoReducer/selectors'
 
 import Header from 'components/Header'
 
 const mapStateToProps = (state) => ({
-  logo: reactLogoSelector(state),
+  logo: logoSelector(state),
 })
 
 export default connect(

@@ -4,12 +4,21 @@ import {
 
 export const logoReducerSelector = (state) => state.get('logoReducer')
 
-export const reactLogoSelector = createSelector(
+export const activeLogoSelector = createSelector(
   logoReducerSelector,
-  (logoReducer) => logoReducer.getIn(['logos', 'reactLogo'])
+  (logoReducer) => logoReducer.get('activeLogo')
+)
+
+export const logoSelector = createSelector(
+  activeLogoSelector,
+  logoReducerSelector,
+  (
+    activeLogo,
+    logoReducer,
+  ) => logoReducer.getIn(['logos', activeLogo])
 )
 
 export const speedSelector = createSelector(
-  reactLogoSelector,
-  (reactLogo) => reactLogo.get('speed')
+  logoSelector,
+  (logo) => logo && logo.get('speed')
 )
