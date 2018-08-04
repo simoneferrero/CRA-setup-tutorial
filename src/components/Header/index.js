@@ -4,7 +4,7 @@ import {
   shape,
 } from 'prop-types'
 
-import reactLogo from 'icons/reactLogo.svg'
+import Icon from 'components/Icon'
 
 import './styles.css'
 
@@ -12,8 +12,9 @@ const Header = ({
   logo,
 }) => (
   <header className="App-header">
-    <img src={reactLogo} className={`App-logo App-logo-${logo.speed}`} alt="logo" />
-    <h1 className="App-title">CRA Setup Tutorial - Immutable & Reselect</h1>
+    <Icon className={`App-logo App-logo-${logo.speed}`} />
+    <h1 className="App-title">Let's create-react-app!</h1>
+    <h2 className="App-subtitle">Step 2 - Immutable & Reselect</h2>
   </header>
 )
 
