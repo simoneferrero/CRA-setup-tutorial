@@ -10,11 +10,11 @@ const Icon = ({
   className,
   color,
   icon,
-  size,
+  height,
 }) => (
   <svg
     {...className && { className }}
-    height={`${size}px`}
+    height={`${height}px`}
     viewBox={`0 0 ${icon ? '1080 1080' : '841.9 595.3'}`}
   >
       {
@@ -39,14 +39,14 @@ Icon.propTypes = {
     bool,
     string,
   ]),
-  size: number,
+  height: number,
 }
 
 Icon.defaultProps = {
   className: false,
   color: '#61DAFB',
   icon: false,
-  size: 80,
+  height: 80,
 }
 
 export default Icon
