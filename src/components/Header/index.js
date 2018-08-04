@@ -3,7 +3,7 @@ import {
   oneOf,
 } from 'prop-types'
 
-import logo from 'icons/logo.svg'
+import Icon from 'components/Icon'
 
 import './styles.css'
 
@@ -11,8 +11,9 @@ const Header = ({
   speed,
 }) => (
   <header className="App-header">
-    <img src={logo} className={`App-logo App-logo-${speed}`} alt="logo" />
-    <h1 className="App-title">CRA Setup Tutorial - Redux</h1>
+    <Icon className={`App-logo App-logo-${speed}`} />
+    <h1 className="App-title">Let's create-react-app!</h1>
+    <h2 className="App-subtitle">Step 1 - Redux</h2>
   </header>
 )
 
