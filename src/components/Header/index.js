@@ -1,7 +1,10 @@
 import React from 'react'
 import {
+  bool,
   oneOf,
+  oneOfType,
   shape,
+  string,
 } from 'prop-types'
 
 import Icon from 'components/Icon'
@@ -12,14 +15,23 @@ const Header = ({
   logo,
 }) => (
   <header className="App-header">
-    <Icon className={`App-logo App-logo-${logo.speed}`} />
+    <Icon
+      className={`App-logo App-logo-${logo.speed}`}
+      color={logo.color}
+      icon={logo.icon}
+    />
     <h1 className="App-title">Let's create-react-app!</h1>
-    <h2 className="App-subtitle">Step 2 - Immutable & Reselect</h2>
+    <h2 className="App-subtitle">Step 2.5 - Immutable & Reselect Refinement</h2>
   </header>
 )
 
 Header.propTypes = {
   logo: shape({
+    color: string,
+    icon: oneOfType([
+      bool,
+      string,
+    ]),
     speed: oneOf([
       'stopped',
       'slow',
@@ -30,6 +42,8 @@ Header.propTypes = {
 
 Header.defaultProps = {
   logo: {
+    color: '',
+    icon: false,
     speed: 'slow',
   },
 }

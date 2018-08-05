@@ -2,11 +2,14 @@ import React from 'react'
 import {
   func,
   oneOf,
+  string,
 } from 'prop-types'
 
 import './styles.css'
 
 const LogoControls = ({
+  color,
+  handleChangeChangeColor,
   handleClickChangeSpeed,
   speed,
 }) => (
@@ -28,10 +31,17 @@ const LogoControls = ({
         </button>
       ))
     }
+    <p>Change the color of the logo</p>
+    <input
+      onChange={(event) => handleChangeChangeColor(event.target.value)}
+      value={color}
+    />
   </div>
 )
 
 LogoControls.propTypes = {
+  color: string,
+  handleChangeChangeColor: func,
   handleClickChangeSpeed: func,
   speed: oneOf([
     'stopped',
@@ -41,6 +51,8 @@ LogoControls.propTypes = {
 }
 
 LogoControls.defaultProps = {
+  color: '',
+  handleChangeChangeColor: () => {},
   handleClickChangeSpeed: () => {},
   speed: 'slow',
 }

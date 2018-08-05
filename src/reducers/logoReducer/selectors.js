@@ -22,3 +22,8 @@ export const speedSelector = createSelector(
   logoSelector,
   (logo) => logo && logo.get('speed')
 )
+
+export const colorSelector = createSelector(
+  logoSelector,
+  (logo) => logo && logo.get('color')
+)

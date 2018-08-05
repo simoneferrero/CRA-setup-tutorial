@@ -6,6 +6,7 @@ import {
 export const LogoRecord = new Record({
   color: undefined,
   height: 80,
+  icon: undefined,
   speed: 'slow',
 })
 

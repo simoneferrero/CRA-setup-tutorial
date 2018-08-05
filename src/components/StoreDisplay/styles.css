@@ -5,3 +5,9 @@
   justify-content: center;
   padding: 20px;
 }
+
+.Store-display-container > pre {
+  max-width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
